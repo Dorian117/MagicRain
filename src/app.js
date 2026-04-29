@@ -4,6 +4,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
 const nodeRoutes = require('./routes/node.routes');
+const readingRoutes = require('./routes/reading.routes');
 // const sensorRoutes = require('./routes/sensor.routes');
 
 const app = express();
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/nodes', nodeRoutes);
+app.use('/api/readings', readingRoutes);
 // app.use('/api/sensors', sensorRoutes);
 
 module.exports = app;
